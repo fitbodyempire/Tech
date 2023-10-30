@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.90), rgba(0,0,0,0.90)), url(https://media.istockphoto.com/photos/3d-render-technology-store-picture-id1126678409?k=6&m=1126678409&s=170667a&w=0&h=J3YEWvSjx3jFMKXSJqauBRHImEs_txhXvdyC-ixfiQc=);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    cursor: pointer;
+    width: 70px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 13px 5px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500px;
+    font-weight: bold;
+}
+.navbar ul li::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 38%;
+    transform: translateY(-50%);
+}
+
+.content h1{
+    font-size: 50px;
+}
+
+.content p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+button{
+    border-radius: 25px;
+    padding: 10px;
+    width: 120px;
+    border: solid 2px red;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    margin: 15px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    border-radius: 25px;
+    background: red;
+    position: absolute;
+    width: 0%;
+    height: 100% ;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+    z-index: -1;
+}  
+
+button:hover span{
+    width: 100%;
+}
